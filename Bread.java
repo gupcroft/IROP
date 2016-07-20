@@ -12,7 +12,7 @@ public abstract class Bread extends MenuItem {
 
     public enum BreadType{
         BreadSticks,
-        CheesyBread,  
+        CheesyBread,   
         GarlicCheesyBread
     }
     
