@@ -5,7 +5,7 @@
  * Description: Group Programming Assignment - Italian Restaurant Ordering Program
  *
  */
-package bread;
+package irop;
 
 
 public abstract class Bread extends MenuItem {
@@ -24,8 +24,8 @@ public abstract class Bread extends MenuItem {
     public Bread(){
     }
     
-    private void setBreadItem(BreadType breadItem) {
-        this.breadItem = breadItem;
+    public Bread(BreadType breadItem){
+         this.breadItem = breadItem;
     }
     
     public BreadType getBreadItem() {
@@ -52,13 +52,12 @@ public abstract class Bread extends MenuItem {
         return price;
     }
     
-    public void setName() {
+     public String getName() {
+         
         String s = breadItem.name();
         String[] r = s.split("(?=\\p{Upper})");
-        name = r[0] + " " + r[1];
-    }
-    
-     public String getName() {
+        name = r[0] + " " + r[1]; 
+        
         return name;
     }
     
@@ -90,7 +89,7 @@ public abstract class Bread extends MenuItem {
                 " Price = " + "$" + price;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Bread myBread = new Bread(){};
         
         // Setting all variables
@@ -104,6 +103,6 @@ public abstract class Bread extends MenuItem {
         
         // Displaying toString
         System.out.println(myBread.toString());
-    }// Main
+    }// Main*/
     
 }// Bread
